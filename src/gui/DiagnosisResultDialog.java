@@ -19,6 +19,14 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.factories.FormFactory;
 
 public class DiagnosisResultDialog extends JDialog {
 
@@ -49,31 +57,7 @@ public class DiagnosisResultDialog extends JDialog {
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
-		lblHeader = new JLabel("Healthy Rabbit");
-		lblHeader.setIcon(new ImageIcon(DiagnosisResultDialog.class.getResource("/resources/1399450955_accepted_48.png")));
 		JPanel panel = new JPanel();
-		GroupLayout gl_contentPanel = new GroupLayout(contentPanel);
-		gl_contentPanel.setHorizontalGroup(
-			gl_contentPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPanel.createSequentialGroup()
-					.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPanel.createSequentialGroup()
-							.addGap(211)
-							.addComponent(lblHeader))
-						.addGroup(gl_contentPanel.createSequentialGroup()
-							.addGap(26)
-							.addComponent(panel, GroupLayout.PREFERRED_SIZE, 542, GroupLayout.PREFERRED_SIZE)))
-					.addContainerGap(26, Short.MAX_VALUE))
-		);
-		gl_contentPanel.setVerticalGroup(
-			gl_contentPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPanel.createSequentialGroup()
-					.addGap(29)
-					.addComponent(lblHeader)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 271, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(21, Short.MAX_VALUE))
-		);
 		{
 			lblResults = new JLabel("New label");
 			lblResults.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -84,17 +68,44 @@ public class DiagnosisResultDialog extends JDialog {
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addGap(32)
-					.addComponent(lblResults, GroupLayout.PREFERRED_SIZE, 452, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(58, Short.MAX_VALUE))
+					.addComponent(lblResults, GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
+					.addGap(58))
 		);
 		gl_panel.setVerticalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_panel.createSequentialGroup()
 					.addContainerGap()
-					.addComponent(lblResults, GroupLayout.PREFERRED_SIZE, 238, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(22, Short.MAX_VALUE))
+					.addComponent(lblResults, GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+					.addGap(22))
 		);
 		panel.setLayout(gl_panel);
+		
+		JPanel panel_1 = new JPanel();
+		GroupLayout gl_contentPanel = new GroupLayout(contentPanel);
+		gl_contentPanel.setHorizontalGroup(
+			gl_contentPanel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPanel.createSequentialGroup()
+					.addGap(31)
+					.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPanel.createSequentialGroup()
+							.addComponent(panel_1, GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)
+							.addGap(22))
+						.addGroup(gl_contentPanel.createSequentialGroup()
+							.addComponent(panel, GroupLayout.DEFAULT_SIZE, 878, Short.MAX_VALUE)
+							.addGap(21))))
+		);
+		gl_contentPanel.setVerticalGroup(
+			gl_contentPanel.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPanel.createSequentialGroup()
+					.addGap(11)
+					.addComponent(panel_1, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(panel, GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
+					.addGap(40))
+		);
+		lblHeader = new JLabel("Healthy Rabbit");
+		panel_1.add(lblHeader);
+		lblHeader.setIcon(new ImageIcon(DiagnosisResultDialog.class.getResource("/resources/1399450955_accepted_48.png")));
 		contentPanel.setLayout(gl_contentPanel);
 		{
 			JPanel buttonPane = new JPanel();

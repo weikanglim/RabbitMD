@@ -127,7 +127,10 @@
 
 (defrule obesity
     "Obesity. Sticky bottom, unable to groom itself thoroughly, large dewlap, tires quickly."
-    (Diagnosis {disease == "Sore hocks"})  (Diagnosis {disease == "Sticky bottom"}) (BodySymptom {value == 6}) (BehaviorSymptom {value == 15}) (BehaviorSymptom {value == 16}) 
+    (declare (salience -50))
+    (BodySymptom {value == 6}) 
+    (or (Diagnosis {disease == "Sore hocks"})  (Diagnosis {disease == "Sticky bottom"}))  
+    (or (BehaviorSymptom {value == 15}) (BehaviorSymptom {value == 16})) 
     => (add (new Diagnosis  "Obesity" "Caused by high protein diet. Rabbit should be given more hay, and snacks should be cut down." 1)))
 
 (defrule myxomatosis
@@ -137,7 +140,7 @@
 
 (defrule viral-haemorrhagic-disease
     "Viral Haemorrhagic Disease. Fever / bleeding from nose and bottom / difficulty breathing / spasms." 
-    (or (BodySymptom {value == 8}) (NoseSymptom {value == 2}) (BodySymptom {value == 9}) (BehaviorSymptom {value == 18}) (BehaviorSymptom {value == 17}))
+    (or (NoseSymptom {value == 2}) (BodySymptom {value == 9})) (or (BodySymptom {value == 8})  (BehaviorSymptom {value == 18}) (BehaviorSymptom {value == 17}))
     => (add (new Diagnosis "Viral Haemorrhagic Disease" "Blood clotting disease." 2)))
 
 (defrule poisoning
@@ -164,8 +167,8 @@
 (defrule symptoms-present
     "Fires if there are symptoms present in the rabbit, and no diagnosis is given."
     (declare (salience -100))
-    (or (exists (BehaviorSymptom))  (exists (BodySymptom)) (exists(EarSymptom)) (exists(ExcretionSymptom)) 
-        (exists(EyeSymptom)) (exists(NoseSymptom)) (exists(SkinSymptom)) (exists(TeethSymptom)) (exists (BodySymptom))
+    (or (exists (BehaviorSymptom {value != -1}))  (exists (BodySymptom {value != -1})) (exists(EarSymptom {value != -1})) (exists(ExcretionSymptom {value != -1})) 
+        (exists(EyeSymptom {value != -1})) (exists(NoseSymptom {value != -1})) (exists(SkinSymptom {value != -1})) (exists(TeethSymptom {value != -1})) (exists (BodySymptom {value != -1}))
         ) (not (Diagnosis))
     => (add (new Diagnosis "some disease that RabbitMD hasn't been able to diagnose" 
             "Present more symptoms to maybe achieve a diagnosis. 
