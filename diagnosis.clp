@@ -33,9 +33,9 @@
 )
 
 (defrule bloody-urine
-    "Diagnosis for bloody urine. Rabbits must have red coloured urine, accompanied by behavioral problem."
+    "Diagnosis for bloody urine. Rabbits must have red coloured urine, accompanied by straining to urinate / loss of appteite / tiredness."
     (ExcretionSymptom {value == 2})
-    (or (BehaviorSymptom {value == 5}) (BehaviorSymptom {value == 6}))
+    (or (BehaviorSymptom {value == 4}) (BehaviorSymptom {value == 6}) (BehaviorSymptom {value == 2}))
     => (add (new Diagnosis "Bloody urine" "Bloody urine indicates a problem with kidney or bladder." 2)))
 
 (defrule possible-bloody-urine
