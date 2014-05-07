@@ -1,0 +1,89 @@
+Teeth
+-1	None
+0	Teeth visible always
+1	Wetness on chin under teeth
+2	Excessive tooth grinding
+3	Swelling under skin near jaw
+4	Excessive saliva discharge
+5	Swelling mouth
+----
+Eyes
+-1	None
+0	Red eyes
+1	Swollen iris
+2	Eye discharge
+3	Pus around eyes
+4	Eye stick shut
+5	Swelling eyelids
+6	Blindness
+7	Bulging eyes
+----
+Nose
+-1	None
+0	Crusty discharge around nostrils
+1	Runny Nose
+2	Bleeding
+----
+Skin
+-1	None
+0	Hair Loss
+1	Redness
+2	Small crusts
+3	Flaking
+4 	Multiple spots of hair loss, patchy edges
+5	Rough coat
+----
+Body
+-1	None
+0	Swollen abdomen
+1	Swollen skin near wounds / scratches
+2	Scabs appear on bottom of rear feet
+3	Hole appears near swollen skin
+4	Lumps on belly / breast of female rabbits
+5	Bloated stomach
+6	Large dewlap
+7	Swelling genitals
+8	Fever
+9	Bleeding from bottom
+10	Lesions throughout the body
+11	Paralysis
+12	Bite wounds
+13	Swelling around upper torso
+----
+Ears
+-1	None
+0	Red-brown crusts present
+1	Unpleasant, musky smell
+2	Swelling ears
+----
+Excretion
+-1	None
+0	Small (or no) fecal pellets
+1	Fecal pellets in clear/ yellowish mucus
+2	Reddish coloured urine
+3	Bloody discharge from vaginal opening
+4	Diarrhoea
+5	Droppings stuck to hair around its bottom
+----
+Behavior
+-1	None
+0	Excessive scratching, licking
+1	Self-biting / chewing
+2	Sudden loss of appetite
+3	Loud, violent gurgle heard in intestine
+4	Lethargic, passive behavior
+5	Unusual body temperature
+6	Straining to urinate
+7	Head tilt
+8	Increased aggressiveness
+9	Excessive shaking of head, ear scratching
+10	Increased respiration rate
+11	Tremors
+12	Tilted head
+13	Loss of balance
+14	Excessive drinking
+15	Tires quickly
+16	Difficulties grooming itself
+17	Spasms
+18	Difficulty breathing
+----
