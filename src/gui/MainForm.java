@@ -141,6 +141,7 @@ public class MainForm {
 		);
 		
 		listEyes = new JList();
+		listEyes.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_1.setViewportView(listEyes);
 		panel_3.setLayout(gl_panel_3);
 		
@@ -166,6 +167,7 @@ public class MainForm {
 		);
 		
 		listBody = new JList();
+		listBody.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_2.setViewportView(listBody);
 		panel_4.setLayout(gl_panel_4);
 		
@@ -191,6 +193,7 @@ public class MainForm {
 		);
 		
 		listBehavior = new JList();
+		listBehavior.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_3.setViewportView(listBehavior);
 		panel_5.setLayout(gl_panel_5);
 		
@@ -216,6 +219,7 @@ public class MainForm {
 		);
 		
 		listTeeth = new JList();
+		listTeeth.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_5.setViewportView(listTeeth);
 		panel_7.setLayout(gl_panel_7);
 		
@@ -241,6 +245,7 @@ public class MainForm {
 		);
 		
 		listNose = new JList();
+		listNose.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_6.setViewportView(listNose);
 		panel_8.setLayout(gl_panel_8);
 		
@@ -266,6 +271,7 @@ public class MainForm {
 		);
 		
 		listExcretion = new JList();
+		listExcretion.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_7.setViewportView(listExcretion);
 		panel_9.setLayout(gl_panel_9);
 		
@@ -286,6 +292,7 @@ public class MainForm {
 		);
 		
 		listEars = new JList();
+		listEars.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane.setViewportView(listEars);
 		panel_2.setLayout(gl_panel_2);
 		
@@ -355,6 +362,7 @@ public class MainForm {
 		);
 		
 		listSkin = new JList();
+		listSkin.setToolTipText("Select multiple symptoms by SHIFT or CTRL clicking");
 		scrollPane_4.setViewportView(listSkin);
 		panel_6.setLayout(gl_panel_6);
 		listSkin.setListData(database.getSkin().toArray());
